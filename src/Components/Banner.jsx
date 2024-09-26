@@ -1,5 +1,4 @@
 import '../App.css'
-import image from '../assets/images/images12.png'
 
 function Banner() {
     return (
@@ -8,8 +7,7 @@ function Banner() {
           <img
             alt="Interior with a plant, chair, and lamp"
             className="absolute inset-0 object-cover w-full h-full"
-            src={image}
-           
+            src='/images/images12.png'           
           />
           <div className="relative z-10 flex items-center justify-end w-full h-full p-8  bg-opacity-75">
             <div className="max-w-md p-8 rounded-lg" style={{backgroundColor:'#FFF3E3'}}>

@@ -7,9 +7,7 @@ import ShopBanner from "../Components/ShopBanner"
     // import image11 from '../assets/images/table.png';
     // import image12 from '../assets/images/bathroomsink.png';
     // import image13 from '../assets/images/chair.png';
-    import icon from '../assets/images/system-uicons_filtering.png';
-    import icon1 from '../assets/images/Vector.png';
-    import icon2 from '../assets/images/bi_view-list.png';
+    
 
 function Shop(){
 //     const object =
@@ -69,12 +67,12 @@ function Shop(){
         <div className="bg-[#f8f1e7]  flex justify-around items-center h-20 w-full">
            <div className="flex justify-center gap-7 w-3/4  items-center">
             <div className="flex cursor-pointer justify-between items-center w-20">
-               <img src={icon}  alt="icon" />
+               <img src='/images/system-uicons_filtering.png'  alt="icon" />
             <p className="font-poppins text-lg font-normal">Filter</p>
             </div>
            
-            <img className="cursor-pointer"  src={icon1} alt="icon" />
-            <img className="cursor-pointer" src={icon2} alt="icon" />
+            <img className="cursor-pointer"  src='/images/Vector.png' alt="icon" />
+            <img className="cursor-pointer" src='/images/bi_view-list.png' alt="icon" />
             <div className="font-poppins text-lg font-normal" style={{ borderLeft: '2px solid black', height: '30px',paddingLeft:'18px' }}>
             Showing 1–16 of 32 results
             </div>

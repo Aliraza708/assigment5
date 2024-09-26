@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import image from '../assets/images/Rectangle 1.png'
 import { RightOutlined } from '@ant-design/icons'
 
 function ShopBanner(){
@@ -9,7 +8,7 @@ function ShopBanner(){
           <img
             alt="Interior with a plant, chair, and lamp"
             className="absolute inset-0 object-cover w-full h-full"
-            src={image}
+            src='/images/Rectangle 1.png'
            
           />
           <div className="relative z-10 flex flex-col items-center justify-center w-full h-full p-8  bg-opacity-75">

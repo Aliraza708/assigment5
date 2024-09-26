@@ -1,6 +1,5 @@
 import { HeartOutlined, MenuOutlined, SearchOutlined, ShoppingCartOutlined, UserOutlined } from "@ant-design/icons"
 import { Button, Dropdown, Menu } from "antd";
-import image8 from '../assets/images/logo.png';
 import { Link } from "react-router-dom";
 function Header() {
     const mobileMenu = {
@@ -15,7 +14,7 @@ function Header() {
         <div className="bg-white text-black p-3  sticky top-0 z-50">
             <div className="flex justify-around items-center mt-4">
                 <div>
-                    <img src={image8} alt="logo" className="w-[185px] h-[41px]" />
+                    <img src='/images/logo.png' alt="logo" className="w-[185px] h-[41px]" />
                 </div>
                 <div className="hidden md:flex gap-6 font-poppins text-black font-semibold text-base leading-6">
                     <Link to={'/'}>Home</Link>

@@ -1,4 +1,3 @@
-// import Image from 'src/assets/images/images12.png'
 
 function Hero() {
     return (
@@ -10,19 +9,19 @@ function Hero() {
          <div className="flex flex-wrap p-3 w-full   gap-6 justify-evenly mt-7 items-center">
            <div >
                 <div className="card__content">
-                    <img src="src/assets/images/images11.png" alt="Dining"  />
+                    <img src="/images/images11.png" alt="Dining"  />
                 </div>
                 <h1 className="text-xl text-center font-semibold pt-4">Dining</h1>
             </div>  
             <div >
                 <div className="card__content">
-                    <img src="src/assets/images/images1.png" alt="Living"  />
+                    <img src="/images/images1.png" alt="Living"  />
                 </div>
                 <h1 className="text-xl text-center font-semibold pt-4">Living</h1>
             </div>
              <div >
                 <div className="card__content">
-                    <img src="src/assets/images/images10.png" alt="bedroom"  />
+                    <img src="/images/images10.png" alt="bedroom"  />
                 </div>
                 <h1 className="text-xl text-center font-semibold pt-4">Bedroom</h1>
             </div>
