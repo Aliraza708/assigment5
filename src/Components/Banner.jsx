@@ -3,7 +3,7 @@ import '../App.css'
 function Banner() {
     return (
         <div className="flex items-center justify-center  " style={{backgroundColor:'#EFEFEF'}}>
-        <div className="relative w-full p-8 bg-white">
+        <div  className="relative w-full  p-8 bg-white">
           <img
             alt="Interior with a plant, chair, and lamp"
             className="absolute inset-0 object-cover w-full h-full"

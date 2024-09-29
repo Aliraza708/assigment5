@@ -2,8 +2,6 @@
 
 function Card({ item }) {
   return (
-
-
     <div className="flex flex-wrap  gap-8 items-center justify-center min-h-screen ">
       {item.map((data) => {
         const { categories, image, price, title, id,  } = data
@@ -11,13 +9,13 @@ function Card({ item }) {
 
         return (
 
-          <div key={id} className="bg-white border  overflow-hidden max-w-xs w-72">
+          <div key={id}  className="bg-white border h-[400px] overflow-hidden max-w-xs w-72">
 
             <div className="relative">
               <img
                 src={image}
                 alt="A minimalist flower pot on an orange leather sofa"
-                className="w-full h-72 object-cover"
+                className="w-full cursor-pointer  h-72 object-cover"
               />
               {/* <div className="absolute top-2 right-2 bg-teal-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
             New
