@@ -14,7 +14,7 @@ function ShopBanner(){
           <div className="relative z-10 flex flex-col items-center justify-center w-full h-full p-8  bg-opacity-75">
             <h1 className='text-5xl font-semibold font-poppins'>Shop</h1>
            <div className='mt-4 font-poppins flex gap-2 text-lg '>
-           <Link to={'/'} className=' font-medium'> Home <RightOutlined /> </Link><p className='font-normal'>Shop</p> 
+           <Link to={'/'} className=' font-medium text-[#9F9F9F]'> Home  </Link><RightOutlined /><p className='font-normal'>Shop</p> 
            </div>
           </div>
         </div>

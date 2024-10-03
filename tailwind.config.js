@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      screens: {
+        'custom-breakpoint': '471px',
+      }
     },
   },
   plugins: [],

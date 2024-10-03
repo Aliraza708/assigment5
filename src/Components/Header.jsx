@@ -10,6 +10,9 @@ function Header() {
             { key: 'contact', label: 'Contact' },
         ],
     };
+    function handle(){
+        alert("run")
+    }
     return (
         <div className="bg-white text-black p-3  sticky top-0 z-50">
             <div className="flex justify-around items-center mt-4">
@@ -25,7 +28,10 @@ function Header() {
 
                 <div className="flex gap-6">
                     <div ><UserOutlined style={{ fontSize: '20px', cursor: 'pointer', }} /></div>
-                    <div><SearchOutlined style={{ fontSize: '20px', cursor: 'pointer', }} /></div>
+                    <div>
+                        <SearchOutlined onClick={handle} style={{ fontSize: '20px', cursor: 'pointer', }} />
+                        
+                        </div>
                     <div><HeartOutlined style={{ fontSize: '20px', cursor: 'pointer', }} /></div>
                     <div><ShoppingCartOutlined style={{ fontSize: '20px', cursor: 'pointer', }} /></div>
                 </div>
