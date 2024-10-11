@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../App.css'
 
 function Banner() {
@@ -19,9 +20,12 @@ function Banner() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                 tellus, luctus nec ullamcorper mattis.
               </p>
-              <button className="px-6 py-3 mt-6 text-white rounded hover:bg-yellow-800" style={{backgroundColor:'#B88E2F'}}>
+              <Link to={"/shop"}>
+               <button className="px-6 py-3 mt-6 text-white rounded hover:bg-yellow-800" style={{backgroundColor:'#B88E2F'}}>
                 BUY NOW
               </button>
+              </Link>
+             
             </div>
           </div>
         </div>

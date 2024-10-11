@@ -5,10 +5,10 @@ import { ProductContext } from "../ContextApi/ProductContext"
 import ProductDetailCard from "../Components/ProductDetailCard"
 
 
-export default function ProductDetail(){
+export default  function ProductDetail(){
     const {id} = useParams()
-    const { Product } = useContext(ProductContext);
-    const fil = Product.filter((data)=>data.id == id)
+    const { Product } =  useContext(ProductContext);
+    const fil =  Product.filter((data)=>data.id == id)
        return(
         <div className="font-poppins">
       <div className="bg-[#F9F1E7]  h-16 flex  items-center  pl-14 " >
@@ -31,7 +31,7 @@ export default function ProductDetail(){
               marginLeft : '15px',
               marginTop: '5px'
             }}>
-          {fil[0].title}
+          {fil[0]?.title}
         </div>
       </div>
       <div>

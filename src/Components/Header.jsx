@@ -1,6 +1,7 @@
 import { HeartOutlined, MenuOutlined, SearchOutlined, ShoppingCartOutlined, UserOutlined } from "@ant-design/icons"
-import { Button, Dropdown, Menu } from "antd";
+import { Badge, Button, Dropdown, Menu } from "antd";
 import { Link } from "react-router-dom";
+import AddtoCartDrawer from "./addtocartDrawer";
 function Header() {
     const mobileMenu = {
         items: [
@@ -10,9 +11,7 @@ function Header() {
             { key: 'contact', label: 'Contact' },
         ],
     };
-    function handle(){
-        alert("run")
-    }
+   
     return (
         <div className="bg-white text-black p-3  sticky top-0 z-50">
             <div className="flex justify-around items-center mt-4">
@@ -29,20 +28,25 @@ function Header() {
                 <div className="flex gap-6">
                     <div ><UserOutlined style={{ fontSize: '20px', cursor: 'pointer', }} /></div>
                     <div>
-                        <SearchOutlined onClick={handle} style={{ fontSize: '20px', cursor: 'pointer', }} />
-                        
+                        <SearchOutlined  style={{ fontSize: '20px', cursor: 'pointer', }} />
                         </div>
                     <div><HeartOutlined style={{ fontSize: '20px', cursor: 'pointer', }} /></div>
-                    <div><ShoppingCartOutlined style={{ fontSize: '20px', cursor: 'pointer', }} /></div>
+                    <div>
+                  
+                    <AddtoCartDrawer />
+
                 </div>
+                </div>
+                
 
                 <div className="md:hidden">
 
-                    <Dropdown menu={mobileMenu} trigger={['click']} placement="bottomRight">
-                        <Button icon={<MenuOutlined />} />
+                    <Dropdown  menu={mobileMenu} trigger={['click']} placement="bottomRight">
+                        <Button style={{borderColor : 'black' ,  color :'black'}}  icon={<MenuOutlined  />} />
                     </Dropdown>
                 </div>
             </div>
+           
         </div>
     )
 

@@ -4,14 +4,18 @@ import App from './App.jsx'
 import '@fontsource/poppins';
 import './index.css'
 import ProductContextProvider from './ContextApi/ProductContext.jsx';
+import CartContextProvider from './ContextApi/AddtoCartContextapi.jsx';
 
 createRoot(document.getElementById('root')).render(
   <ProductContextProvider>
-    <StrictMode>
+    <CartContextProvider>
+      <StrictMode>
 
-      <App />
+        <App />
 
 
-    </StrictMode>,
+      </StrictMode>,
+    </CartContextProvider>
+
   </ProductContextProvider>
 )

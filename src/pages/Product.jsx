@@ -5,17 +5,17 @@ import { Link } from "react-router-dom";
 
 function Product() {
   const { Product } = useContext(ProductContext);
-  const [visible, setVisible] = useState(8); // Initially show 8 products
+  const [visible, setVisible] = useState(8); 
 
   const handleShowMore = () => {
-    setVisible((prevVisible) => prevVisible + 4); // Show 4 more products on each click
+    setVisible((prevVisible) => prevVisible + 4); 
   };
 
   return (
     <div className="mt-9">
       <h1 className="text-center font-bold text-3xl font-poppins">Our Products</h1>
       <div className="mt-8">
-        <Card item={Product.slice(0, visible)} /> {/* Pass only the visible products to Card */}
+        <Card item={Product.slice(0, visible)} />
       </div>
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
         {visible < Product.length && ( 
