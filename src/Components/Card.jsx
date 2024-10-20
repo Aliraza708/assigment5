@@ -23,7 +23,7 @@ function Card({ item }) {
 
               <div className="absolute inset-0 flex items-center justify-center bg-[#636363] bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
                 <button onClick={()=>addItem(data)} className="bg-white hover:opacity-95 text-yellow-600 font-semibold py-2 px-4 rounded shadow">
-                  Add to cart
+                  {isItemadd(data.id) ? `Added ${isItemadd(data.id).qunantity}` : "  Add to cart " }
                 </button>
               </div>
 

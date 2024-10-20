@@ -5,17 +5,22 @@ import '@fontsource/poppins';
 import './index.css'
 import ProductContextProvider from './ContextApi/ProductContext.jsx';
 import CartContextProvider from './ContextApi/AddtoCartContextapi.jsx';
+import AuthContextProvider from './ContextApi/auth.jsx';
 
 createRoot(document.getElementById('root')).render(
   <ProductContextProvider>
-    <CartContextProvider>
-      <StrictMode>
+    <AuthContextProvider>
+      <CartContextProvider>
 
-        <App />
+        <StrictMode>
+
+          <App />
 
 
-      </StrictMode>,
-    </CartContextProvider>
+        </StrictMode>,
+      </CartContextProvider>
+
+    </AuthContextProvider>
 
   </ProductContextProvider>
 )

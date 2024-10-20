@@ -1,7 +1,10 @@
 import { Rate } from "antd";
+import { CartContext } from "../ContextApi/AddtoCartContextapi";
+import { useContext } from "react";
 
 export default function ProductDetailCard({ item }) {
-  console.log(item)
+  const { cart, addItem } = useContext(CartContext)
+  console.log(cart)
   return( item.map((data) => {
     const { id,categories, image, price, title, description } = data
     return (
@@ -79,8 +82,8 @@ export default function ProductDetailCard({ item }) {
             <button className="px-4 py-2 border rounded-lg">-</button>
             <span className="px-4">1</span>
             <button className="px-4 py-2 border rounded-lg">+</button>
-            <button className="ml-4 px-6 py-2 bg-black text-white rounded-lg">
-              Add To Cart
+            <button onClick={()=> addItem(data)} className="ml-4 px-6 py-2 bg-black text-white rounded-lg">
+                 Add To Cart
             </button>
             <button className="ml-4 px-6 py-2 border rounded-lg">+ Compare</button>
           </div>
