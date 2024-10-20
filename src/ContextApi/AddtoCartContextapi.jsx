@@ -30,6 +30,8 @@ export default function CartContextProvider({children}){
      const cartIndex = cart.findIndex((data)=>data.id == items.id)
      if(cartIndex == -1){
         array.push({...items , qunantity : 1})
+        setLoding(true)
+
      }else{
          array[cartIndex].qunantity++
      }
