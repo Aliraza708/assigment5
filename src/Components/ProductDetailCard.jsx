@@ -3,13 +3,16 @@ import { CartContext } from "../ContextApi/AddtoCartContextapi";
 import { useContext } from "react";
 
 export default function ProductDetailCard({ item }) {
-  const { cart, addItem } = useContext(CartContext)
-  console.log(cart)
+  const { cart, addItem ,lessqunatity} = useContext(CartContext)
+ 
+
   return( item.map((data) => {
-    const { id,categories, image, price, title, description } = data
+    const { id,categories, image, price, title, description,qunantity } = data
+         const fil = cart.filter((data)=>data.id == id)
+         console.log(fil[0]?.qunantity)
     return (
-      <div key={id} className="flex-1 flex flex-col mt-7 md:flex-row md:space-x-8">
-        <div className="flex flex-col ml-10 space-y-4">
+      <div key={id} className="flex-1 pl-8 flex flex-col mt-7  md:flex-row md:space-x-8">
+        {/* <div className="flex flex-col ml-10 space-y-4">
           <img
             alt="Sofa image 1"
             className="rounded-lg"
@@ -38,9 +41,9 @@ export default function ProductDetailCard({ item }) {
             src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-PYsYDPd6LWGMGSyQN8zqy5Wa.png?st=2024-10-01T13%3A06%3A38Z&se=2024-10-01T15%3A06%3A38Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-09-30T19%3A56%3A28Z&ske=2024-10-01T19%3A56%3A28Z&sks=b&skv=2024-08-04&sig=c6ahkFQyrmJNyUCOXC6k8Nl/Gk3%2BsztPtr97udLNisc%3D"
             width={100}
           />
-        </div>
+        </div> */}
 
-        <div className="bg-[#f9f3ea] p-8 rounded-lg " style={{
+        <div className="bg-[#f9f3ea] p-8 rounded-lg" style={{
           width: '450px',
           height: '450px'
         }}>
@@ -62,7 +65,7 @@ export default function ProductDetailCard({ item }) {
           <p className="text-gray-700 mb-4">
             {description}
           </p>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <p className="text-gray-700 mb-2">Size</p>
             <div className="flex space-x-2">
               <button className="px-4 py-2 border rounded-lg">L</button>
@@ -77,15 +80,20 @@ export default function ProductDetailCard({ item }) {
               <button className="w-8 h-8 rounded-full bg-black"></button>
               <button className="w-8 h-8 rounded-full bg-yellow-500"></button>
             </div>
-          </div>
+          </div> */}
           <div className="flex items-center mb-4">
-            <button className="px-4 py-2 border rounded-lg">-</button>
-            <span className="px-4">1</span>
-            <button className="px-4 py-2 border rounded-lg">+</button>
+            {fil[0]?.qunantity == undefined ? null : <div>
+              <button className="px-4 py-2 border rounded-lg" onClick={()=>lessqunatity(data.id)}>-</button>
+            <span className="px-4">{fil[0]?.qunantity}</span>
+            <button className="px-4 py-2 border rounded-lg" onClick={()=>addItem(data)}>+</button> 
+            </div>
+            
+            }
+           
             <button onClick={()=> addItem(data)} className="ml-4 px-6 py-2 bg-black text-white rounded-lg">
                  Add To Cart
             </button>
-            <button className="ml-4 px-6 py-2 border rounded-lg">+ Compare</button>
+            {/* <button className="ml-4 px-6 py-2 border rounded-lg">+ Compare</button> */}
           </div>
           <div className="border-t pt-4">
             <p className="text-gray-700 mb-2">SKU : SS001</p>

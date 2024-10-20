@@ -3,11 +3,13 @@ import { Link, useParams } from "react-router-dom"
 import { useContext, useState } from "react"
 import { ProductContext } from "../ContextApi/ProductContext"
 import ProductDetailCard from "../Components/ProductDetailCard"
+import { CartContext } from "../ContextApi/AddtoCartContextapi"
 
 
 export default  function ProductDetail(){
     const {id} = useParams()
     const { Product } =  useContext(ProductContext);
+
     const fil =  Product.filter((data)=>data.id == id)
        return(
         <div className="font-poppins">
